@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="日本のジュエリーブランド yonkai 公式サイト">
+	<meta name="description" content="日本のジュエリーブランド sangai 公式サイト">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -10,10 +10,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/moving_letters.js"></script>
 
 	<!-- less化 -->
-	<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.less">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
-
-	<title>yonkai</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+	<title>sangai</title>
     <?php wp_head(); ?>
 </head>
 
