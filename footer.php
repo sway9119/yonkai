@@ -2,6 +2,6 @@
 <footer>
 </footer>
 </div><!-- #wrapper -->
-<?php wp_foot(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>
