@@ -1,7 +1,5 @@
 <?php
-/**
- * Template Name: collection
- */ 
+
 get_header(); ?>
 <?php if (have_posts()) : 
 global $post;
