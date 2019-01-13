@@ -51,6 +51,7 @@ $(function(){
   function modal_window() {
 
 
+
     // モーダルウィンドウで表示したいリストのid,class名
     var target_list = '.js_light_box';
 
@@ -58,6 +59,7 @@ $(function(){
     if (!$(target_list).get(0)) {
       return false;
     }
+
 
     // モーダルウィンドウのパーツを生成
 
@@ -149,18 +151,29 @@ $(function(){
     var modal_back_obj = $('.modal_background');
     var prev_btn = $('.prev');
     var next_btn = $('.next');
+    var $lightObj = $('.js_light_box');
 
     // 表示するリストのnodelist -> ulの中のli達
     var list_obj = $(target_list).children();
     // listの長さ
     var list_length = list_obj.length;
+    // 列数
+    var LINENUM = 3;
+    var mod = list_length % LINENUM;
 
     // index いま表示されている要素のインデックス
     var index;
 
 
+    if (mod !== 0) {
+      for (var k = LINENUM; k > mod; k--) {
+        $lightObj.append('<li class="empty_list"><div class="empty_box"></div></li>');
+      }
+    }
+
     // 全てのリストの中身にクリックイベントを付与するためのループ
-    for (var i = 0; i < list_length - 2; i++) {
+    for (var i = 0; i < list_length; i++) {
+
 
       // イベント付与
       list_obj.eq(i).on('click', function(e){
@@ -196,6 +209,8 @@ $(function(){
 
 
       });/*event end*/
+
+
 
     }/* for end*/
 
